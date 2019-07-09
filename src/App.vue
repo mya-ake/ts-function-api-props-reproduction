@@ -2,7 +2,7 @@
   <div id="app">
     <BaseButton>No props</BaseButton>
     <BaseButton type="submit">Type Submit</BaseButton>
-    <BaseButton Disabled>Disabled Button</BaseButton>
+    <BaseButton disabled>Disabled Button</BaseButton>
   </div>
 </template>
 
