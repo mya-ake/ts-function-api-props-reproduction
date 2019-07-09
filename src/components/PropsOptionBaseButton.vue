@@ -8,15 +8,21 @@
 <script lang="ts">
 import { createComponent } from "vue-function-api";
 
-type Props = {
-  type?: "button" | "submit";
-  disabled?: boolean;
-};
-
 export default createComponent({
-  setup(props: Props) {
-    console.log("BaseButton", props); // Empty object {}
-    const { type = "button", disabled = false } = props;
+  props: {
+    type: {
+      type: String,
+      default: "button"
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    }
+  },
+
+  setup(props) {
+    console.log("PropsOptionBaseButton", props); // Non empty object {}
+    const { type, disabled } = props;
 
     return {
       type,
